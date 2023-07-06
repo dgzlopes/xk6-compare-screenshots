@@ -25,20 +25,7 @@ Then:
 
 ## How to use
 
-We provide two functions: `compareImages` and `compareScreenshots`.
-
-### compareImages
-
-This function compares two images and returns the percentage of the difference between them.
-
-```javascript
-import { compareImages } from 'https://raw.githubusercontent.com/dgzlopes/xk6-compare-screenshots/main/lib.js';
-
-export default function () {
-    const diff = compareImages("hello.png", "hello2.png", "diff.png");
-    console.log(`The difference between the images is ${diff}%`);
-}
-```
+We provide two functions: `compareScreenshots` and `compareImages`.
 
 ### compareScreenshots
 > This functionality is built on top of [xk6 Browser](https://k6.io/docs/using-k6-browser/overview/).
@@ -77,6 +64,19 @@ The `compareScreenshots` API has the following parameters:
 - `page`: The page object from xk6 Browser.
 - `filePath`: The path where the screenshot will be saved. By default: `screenshot.png`.
 - `threshold`: The percentage of the difference between the two images. By default: `0`.
+
+### compareImages
+
+This function compares two images and returns the percentage of the difference between them.
+
+```javascript
+import { compareImages } from 'https://raw.githubusercontent.com/dgzlopes/xk6-compare-screenshots/main/lib.js';
+
+export default function () {
+    const diff = compareImages("hello.png", "hello2.png", "diff.png");
+    console.log(`The difference between the images is ${diff}%`);
+}
+```
 
 ## Credits
 
