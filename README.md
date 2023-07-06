@@ -32,7 +32,7 @@ We provide two functions: `compareImages` and `compareScreenshots`.
 This function compares two images and returns the percentage of the difference between them.
 
 ```javascript
-import { compareImages } from './lib.js';
+import { compareImages } from 'https://raw.githubusercontent.com/dgzlopes/xk6-compare-screenshots/main/lib.js';
 
 export default function () {
     const diff = compareImages("hello.png", "hello2.png", "diff.png");
@@ -49,7 +49,7 @@ If it does: It takes a new screenshot and compares it with the previous one. If 
 
 ```javascript
 import { chromium } from 'k6/experimental/browser';
-import { compareScreenshots } from './lib.js';
+import { compareScreenshots } from 'https://raw.githubusercontent.com/dgzlopes/xk6-compare-screenshots/main/lib.js';
 
 export default async function () {
   const browser = chromium.launch({

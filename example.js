@@ -1,5 +1,5 @@
 import { chromium } from 'k6/experimental/browser';
-import { compareScreenshots } from './lib.js';
+import { compareScreenshots } from 'https://raw.githubusercontent.com/dgzlopes/xk6-compare-screenshots/main/lib.js';
 
 export default async function () {
   const browser = chromium.launch({
